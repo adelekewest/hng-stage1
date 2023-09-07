@@ -24,8 +24,8 @@ app.get("/api", (req, res) => {
         "current_day": currentDay,
         "utc_time": formattedUTC,
         "track": req.query.track,
-        "github_file_url": "",
-        "github_repo_url": "",
+        "github_file_url": "https://github.com/adelekewest/hng-stage1/app.js",
+        "github_repo_url": "https://github.com/adelekewest/hng-stage1",
         "status_code": res.statusCode
     })
 });
