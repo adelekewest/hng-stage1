@@ -1,0 +1,14 @@
+{
+  "name": "hng-stage1",
+  "version": "1.0.0",
+  "description": "The Stage 1 project of the hng internship",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adeleke Gbenga",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
