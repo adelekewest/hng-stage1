@@ -11,11 +11,18 @@ const year = currentDate.getUTCFullYear();
 const month = (currentDate.getUTCMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
 const day = currentDate.getUTCDate().toString().padStart(2, '0');
 const hour = currentDate.getUTCHours().toString().padStart(2, '0');
-const minute = currentDate.getUTCMinutes().toString().padStart(2, '0');
-const second = currentDate.getUTCSeconds().toString().padStart(2, '0');
+
+// Generate a random number between -2 and 2 (representing minutes)
+const randomMinutes = Math.floor(Math.random() * 5) - 2;
+
+// Apply the random adjustment to the current time
+currentDate.setUTCMinutes(currentDate.getUTCMinutes() + randomMinutes);
+
+// Format the adjusted UTC time as a string
+const formattedMinutes = currentDate.toISOString().slice(0, 19) + 'Z';
 
 // Create the formatted UTC time string
-const formattedUTC = `${year}-${month}-${day}T${hour}:${minute}:${second}Z`;
+const formattedUTC = `${year}-${month}-${day}T${hour}:${formattedMinutes}`;
 
 
 app.get("/api", (req, res) => {
