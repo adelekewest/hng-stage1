@@ -8,7 +8,7 @@ const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Fri
 const currentDay = daysOfWeek[dayOfWeek];
 
 // Generate a random number between -2 and 2 (representing minutes)
-const randomMinutes = Math.floor(Math.random() * 5) - 2;
+const randomMinutes = Math.floor(Math.random() * 2) - 2;
 
 // Apply the random adjustment to the current time
 currentDate.setUTCMinutes(currentDate.getUTCMinutes() + randomMinutes);
