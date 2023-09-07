@@ -7,11 +7,6 @@ const dayOfWeek = currentDate.getDay();
 const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const currentDay = daysOfWeek[dayOfWeek];
 
-// Generate a random number between -2 and 2 (representing minutes)
-const randomMinutes = Math.floor(Math.random() * 2) - 2;
-
-// Apply the random adjustment to the current time
-currentDate.setUTCMinutes(currentDate.getUTCMinutes() + randomMinutes);
 
 // Get the individual components (year, month, day, hour, minute, second)
 const year = currentDate.getUTCFullYear();
