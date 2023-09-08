@@ -19,8 +19,8 @@ const currentDay = daysOfWeek[dayOfWeek];
 // Create the formatted UTC time string
 //const formattedUTC = `${year}-${month}-${day}T${hour}:${minute}:${second}Z`;
 
-const utcString = currentDate.toISOString().replace(/.\d+Z$/g, "Z").padStart(2, "0");
-
+const utcString = currentDate.toISOString().replace(/.\d+Z$/g, "Z").padStart(3, "0");
+console.log(utcString)
 
 app.get("/api", (req, res) => {
     return res.json({
